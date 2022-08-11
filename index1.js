@@ -101,3 +101,50 @@ btnSearch.addEventListener('click', function(){
         }
     }
 })
+btnEdit.addEventListener('click', function(){
+    let bookName = document.getElementById("bookName").value;
+    let author = document.getElementById("Author").value;
+    let year=document.getElementById("year").value;
+    let fiction = document.getElementById("Fiction");
+    let programming = document.getElementById("Computer Programming");
+    let medical = document.getElementById("Medical");
+    let Nonfiction= document.getElementById("NonFiction");
+    let mathematics= document.getElementById("Mathematics");
+
+    if (fiction.checked) {
+        checkedValue = fiction.value;
+    }
+
+    else if (programming.checked) {
+        checkedValue = programming.value;
+    }
+    else if (medical.checked) {
+        checkedValue = medical.value;
+    }
+    else if (Nonfiction.checked){
+        checkedValue = Nonfiction.value;
+    }
+    else if(mathematics.checked){
+        checkedValue = mathematics.value;
+    }
+   if (bookName.length <= 3 || author.length <= 3) {
+        let message = document.getElementById('msg');
+        message = alert( 'Invalid values');
+    }
+    else {
+        if(updated){
+            tds = updated.getElementsByTagName('td')
+            tds[0].innerHTML = bookName
+            tds[1].innerHTML = author
+            tds[3].innerHTML = year
+            tds[2].innerHTML = checkedValue
+
+            alert('Data Updated!')
+        }
+        else{
+            console.log('cant updated')
+        }
+            
+    }
+    
+})
