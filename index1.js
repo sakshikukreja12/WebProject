@@ -101,6 +101,7 @@ btnSearch.addEventListener('click', function(){
         }
     }
 })
+btnEdit = document.getElementById('btn-edit')
 btnEdit.addEventListener('click', function(){
     let bookName = document.getElementById("bookName").value;
     let author = document.getElementById("Author").value;
